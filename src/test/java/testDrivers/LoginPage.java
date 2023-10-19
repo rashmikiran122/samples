@@ -25,8 +25,14 @@ public class LoginPage {
 		
 		
 List<WebElement> items= driver.findElements(By.xpath("(//Ul[@class='G43f7e'])[1]//li//descendant::div[@class='wM6W7d']"));
-//System.out.print("Number of itemns.."+items.size());
-
+System.out.print("Number of itemns.."+items.size());
+for (WebElement item: items) {
+	System.out.println(item.getText());
+	if(item.getText().equalsIgnoreCase("selenium tutorial pdf")) {
+		item.click();
+		break;
+	}
+}
 	}
 
 }
